@@ -1,0 +1,40 @@
+extends layout
+
+block content
+
+  div(class="col-lg-13")
+    div(class="input-group")
+      input.form-control(type='text', placeholder='Search for your web service' id="FAQSearch"  name='FAQSearch')
+      span.input-group-btn
+        button.btn.btn-secondary(type='submit' id="SearchFAQ") Go!
+
+  hr(class="hr")
+  #FAQ
+      for url in data
+        h3.Topic #{url.type}
+        .TopicContents
+          table.table.table-striped.table-responsive.answer.results(border='1' id="table")
+            thead
+              tr
+                th Web Services
+              tr.warning.no-result
+                td
+                 |  No result
+            tbody
+                  for urls in url.services
+                     tr.clickable-row(data-href='#{url.type}$#{urls.title}$#{urls.server},#{urls.path}')
+                       td
+                          a(href='#') #{urls.title}
+
+
+    #dataResult
+      button#histroy.btn.btn-primary(type='submit') Back
+      hr(class="hr")
+      table.table.table-striped.table-responsive(border='1' id="table")
+        thead
+          tr
+            th Group
+            th Service Name
+            th Result
+            th Duration
+        tbody#resultSet

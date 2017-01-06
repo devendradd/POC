@@ -1,0 +1,51 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.testAlign{
+    text-align: center;
+}
+
+.hr { background-color: #3498DB; height: 1px; border: 0; }
+
+.results tr[visible='false'],
+.no-result{
+  display:none;
+}
+
+.results tr[visible='true']{
+  display:table-row;
+}
+
+#FAQ
+{
+  width: auto;
+}
+.Topic
+{
+  padding: 5px 10px;
+  background-color: #DDDDDD;
+  margin: 0 0 2px 0;
+  cursor: pointer;
+}
+.TopicContents
+{
+  display: none;
+}
+.Question
+{
+  margin: 0;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.highlight
+{
+  background-color: yellow;
+}
+#dataResult{
+  display:none;
+}
