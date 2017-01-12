@@ -1,6 +1,6 @@
 applications:
-- name: ARS-ECC
+- name: Node-ECC
   memory: 1G
-  host: first-poc
+  host: ars-ecc-aspl
   domains:
   - platform-test.allstate.com
