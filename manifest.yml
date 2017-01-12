@@ -1,0 +1,6 @@
+applications:
+- name: ARS-ECC
+  memory: 1G
+  host: first-poc
+  domains:
+  - platform-test.allstate.com
