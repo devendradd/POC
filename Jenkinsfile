@@ -22,6 +22,6 @@ docker.image(docker_registry + "/compozed/ci-base:0.6").inside() {
         ]]) {
 
          stage "Deploy"
-         sh "cf login -a api.cf.nonprod-mpn.ro11.allstate.com -u ${CF_USERNAME} -p ${CF_PASSWORD} --skip-ssl-validation; cf target -o ARS-ECC -s DEV; cf push"
+         sh "cf login -a api.cf.nonprod-mpn.ro11.allstate.com -u ${CF_USERNAME} -p ${CF_PASSWORD} --skip-ssl-validation; cf target -s DEV; cf push"
         }
 }
