@@ -12,6 +12,8 @@ docker.image(docker_registry + "/compozed/ci-base:0.6").inside() {
 
     stage "Assemble"
       sh "npm install"
+    stage "Unit Test"
+      sh "mocha test/unit/ars_soap_client_test.js"
 
     withCredentials([
         [
